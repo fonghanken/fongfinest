@@ -179,7 +179,7 @@ a {
     align-items: center;
     justify-content: center;
     position: relative;
-    background-image: url('https://images.unsplash.com/photo-1542838132-92c53300491e?auto=format&fit=crop&q=80');
+    background-image: url('assets/hero.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
