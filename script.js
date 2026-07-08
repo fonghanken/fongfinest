@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
+    // Force scroll to top on page load to prevent browser from restoring previous scroll position
+    window.scrollTo(0, 0);
+    
     // Mobile Menu Toggle (simple implementation)
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const navLinks = document.querySelector('.nav-links');
