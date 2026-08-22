@@ -59,4 +59,31 @@ document.addEventListener('DOMContentLoaded', () => {
             navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.05)';
         }
     });
+
+    // Hero Image Rotation
+    const heroSection = document.getElementById('hero');
+    if (heroSection) {
+        const heroImages = [
+            'assets/DelBocia_hero1.jpg',
+            'assets/Truffle_hero1.jpg',
+            'assets/Truffle_hero2.jpg',
+            'assets/shoyu-2.jpg'
+        ];
+        
+        let currentImageIndex = 0;
+        
+        // Preload images to avoid flickering
+        heroImages.forEach(src => {
+            const img = new Image();
+            img.src = src;
+        });
+
+        // Set transition for smooth fading
+        heroSection.style.transition = 'background-image 1.5s ease-in-out';
+
+        setInterval(() => {
+            currentImageIndex = (currentImageIndex + 1) % heroImages.length;
+            heroSection.style.backgroundImage = `url('${heroImages[currentImageIndex]}')`;
+        }, 5000); // Change image every 5 seconds
+    }
 });
