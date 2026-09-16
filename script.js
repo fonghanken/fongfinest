@@ -5,14 +5,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // Mobile Menu Toggle (simple implementation)
     const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
     const navLinks = document.querySelector('.nav-links');
-    const ctaNav = document.querySelector('.cta-nav');
+    const navActions = document.querySelector('.nav-actions');
 
     if (mobileMenuToggle) {
         mobileMenuToggle.addEventListener('click', () => {
             const isDisplayed = window.getComputedStyle(navLinks).display !== 'none';
             if (isDisplayed && window.innerWidth <= 768) {
                 navLinks.style.display = 'none';
-                if(ctaNav) ctaNav.style.display = 'none';
+                if(navActions) navActions.style.display = 'none';
             } else {
                 navLinks.style.display = 'flex';
                 navLinks.style.flexDirection = 'column';
@@ -20,12 +20,18 @@ document.addEventListener('DOMContentLoaded', () => {
                 navLinks.style.top = '65px';
                 navLinks.style.left = '0';
                 navLinks.style.width = '100%';
-                navLinks.style.backgroundColor = 'rgba(249, 248, 244, 0.98)';
+                navLinks.style.backgroundColor = 'rgba(19, 35, 32, 0.98)';
                 navLinks.style.padding = '20px';
-                navLinks.style.boxShadow = '0 10px 15px rgba(0,0,0,0.05)';
-                if(ctaNav) {
-                    ctaNav.style.display = 'inline-block';
-                    ctaNav.style.margin = '20px auto 0';
+                navLinks.style.boxShadow = '0 10px 15px rgba(0,0,0,0.5)';
+                if(navActions) {
+                    navActions.style.display = 'flex';
+                    navActions.style.justifyContent = 'center';
+                    navActions.style.padding = '20px';
+                    navActions.style.backgroundColor = 'rgba(19, 35, 32, 0.98)';
+                    navActions.style.position = 'absolute';
+                    navActions.style.top = '220px';
+                    navActions.style.left = '0';
+                    navActions.style.width = '100%';
                 }
             }
         });
