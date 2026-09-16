@@ -64,10 +64,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const heroSection = document.getElementById('hero');
     if (heroSection) {
         const heroImages = [
-            'assets/DelBocia_hero1.jpg',
-            'assets/Truffle_hero1.jpg',
-            'assets/Truffle_hero2.jpg',
-            'assets/shoyu-2.jpg'
+            'assets/butter/hero-1.jpg',
+            'assets/truffles/hero-2.jpg',
+            'assets/truffles/hero-3.jpg',
+            'assets/shoyu/gallery-2.jpg'
         ];
         
         let currentImageIndex = 0;
