@@ -22,16 +22,22 @@ document.addEventListener('DOMContentLoaded', () => {
                 navLinks.style.width = '100%';
                 navLinks.style.backgroundColor = 'rgba(19, 35, 32, 0.98)';
                 navLinks.style.padding = '20px';
-                navLinks.style.boxShadow = '0 10px 15px rgba(0,0,0,0.5)';
+                
                 if(navActions) {
+                    navLinks.style.paddingBottom = '10px';
+                    navLinks.style.boxShadow = 'none';
+                    
                     navActions.style.display = 'flex';
                     navActions.style.justifyContent = 'center';
-                    navActions.style.padding = '20px';
+                    navActions.style.padding = '10px 20px 30px 20px';
                     navActions.style.backgroundColor = 'rgba(19, 35, 32, 0.98)';
                     navActions.style.position = 'absolute';
-                    navActions.style.top = '220px';
+                    navActions.style.top = (65 + navLinks.offsetHeight) + 'px';
                     navActions.style.left = '0';
                     navActions.style.width = '100%';
+                    navActions.style.boxShadow = '0 10px 15px rgba(0,0,0,0.5)';
+                } else {
+                    navLinks.style.boxShadow = '0 10px 15px rgba(0,0,0,0.5)';
                 }
             }
         });
