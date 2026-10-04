@@ -783,3 +783,63 @@ a {
     margin-bottom: auto;
     font-size: 0.95rem;
 }
+
+/* Improvements inspired by Shoyu Bros */
+.main-overlap {
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    margin-top: -60px;
+    position: relative;
+    z-index: 20;
+    background-color: var(--cream, #f9f8f4);
+    padding-top: 40px;
+}
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    background-color: var(--vintage-black, #1a1a1a);
+    color: var(--cream, #f9f8f4);
+    padding: 12px 0;
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+}
+
+.marquee-content {
+    display: inline-block;
+    animation: marquee 25s linear infinite;
+    font-weight: 700;
+    font-size: 1.1rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+@keyframes marquee {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-50%); }
+}
+
+.value-prop-card {
+    background-color: #fff;
+    border-radius: 20px;
+    padding: 40px 30px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transition: transform 0.3s ease;
+}
+.value-prop-card:hover {
+    transform: translateY(-5px);
+}
+.value-prop-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--cream);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: var(--vintage-black);
+}

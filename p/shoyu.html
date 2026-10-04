@@ -50,9 +50,12 @@
 
     <main>
         <!-- Hero Section -->
-        <section class="hero fade-in-up" style="background-image: url('../assets/shoyu/hero-1.jpg'); background-color: #333; background-size: cover; background-position: center;">
-            <div class="hero-overlay" style="background: rgba(0,0,0,0.6);"></div>
-            <div class="container hero-content">
+        <section class="hero hero-video-container fade-in-up" style="position: relative; overflow: hidden; background-color: #333;">
+        <video class="hero-video" autoplay loop muted playsinline poster="assets/shoyu/hero-1.jpg" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.6; z-index: 1;">
+            <source src="https://fonghanken.github.io/shoyubros/stirfry-evaluate-04.mp4" type="video/mp4">
+        </video>
+        <div class="hero-overlay" style="background: rgba(0,0,0,0.4); position: absolute; inset: 0; z-index: 2;"></div>
+            <div class="container hero-content" style="position: relative; z-index: 10;">
                 <h1 class="hero-title">Heritage Artisanal Condiments</h1>
                 <p class="hero-subtitle">Masterfully crafted flavors to elevate your culinary creations.</p>
             </div>
@@ -62,6 +65,7 @@
         <section class="section about-section bg-cream">
             <div class="container about-container fade-in-up">
                 <div class="about-text text-center" style="max-width: 800px; margin: 0 auto;">
+                    <img src="https://shoyubros.com/cdn/shop/files/Shoyubros_logo.png" alt="Brand Logo" style="max-height: 80px; margin: 0 auto 20px; display: block;">
                     <h2 class="section-title">Artisanal Shoyu Bros Aged Shoyu</h2>
                     <p class="tagline">"The Only Umami You Need"</p>
                     <p class="body-text mt-4">Arguably one of the best soy sauces in Malaysia, this aged shoyu is a revelation. It is the first in the market to offer such a unique and fragrant profile. Crafted as a first-draw soy sauce using natural fermentation, it features non-GMO Canadian soybeans and absolutely no MSG.</p>
