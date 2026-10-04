@@ -823,6 +823,7 @@ a {
 
 .value-prop-card {
     background-color: #fff;
+    color: var(--charcoal);
     border-radius: 20px;
     padding: 40px 30px;
     text-align: center;
