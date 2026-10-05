@@ -862,7 +862,7 @@ a {
     display: flex;
     gap: 20px;
     width: max-content;
-    animation: carousel-scroll 30s linear infinite;
+    animation: carousel-scroll 60s linear infinite;
 }
 .infinite-carousel:hover {
     animation-play-state: paused;
