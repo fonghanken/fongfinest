@@ -844,3 +844,8 @@ a {
     margin: 0 auto 20px;
     color: var(--vintage-black);
 }
+
+.portfolio-section {
+    background-color: var(--charcoal);
+    color: var(--foreground);
+}
