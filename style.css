@@ -849,3 +849,32 @@ a {
     background-color: var(--charcoal);
     color: var(--foreground);
 }
+
+/* Infinite Carousel */
+.infinite-carousel-container {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 20px 0;
+    margin: 40px 0;
+}
+.infinite-carousel {
+    display: flex;
+    gap: 20px;
+    width: max-content;
+    animation: carousel-scroll 30s linear infinite;
+}
+.infinite-carousel:hover {
+    animation-play-state: paused;
+}
+.infinite-carousel img {
+    height: 250px;
+    width: auto;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+}
+@keyframes carousel-scroll {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(calc(-50% - 10px)); }
+}
