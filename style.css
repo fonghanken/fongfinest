@@ -878,3 +878,9 @@ a {
     0% { transform: translateX(0); }
     100% { transform: translateX(calc(-50% - 10px)); }
 }
+
+.nav-actions {
+    display: flex;
+    gap: 10px;
+}
+
