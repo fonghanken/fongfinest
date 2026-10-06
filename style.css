@@ -844,7 +844,7 @@ a {
 }
 .infinite-carousel img {
     height: 250px;
-    width: auto;
+    width: 250px;
     object-fit: cover;
     border-radius: 12px;
     box-shadow: 0 10px 30px rgba(0,0,0,0.15);
