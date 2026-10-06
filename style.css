@@ -965,12 +965,13 @@ a {
     cursor: pointer;
 }
 .btn-std-wholesale {
-    background-color: var(--primary);
-    color: var(--charcoal);
-    border: 1px solid var(--primary);
+    background-color: #25D366;
+    color: white;
+    border: 1px solid #25D366;
 }
 .btn-std-wholesale:hover {
-    background-color: var(--primary-hover);
+    background-color: #20BA5A;
+    color: white;
 }
 .btn-std-retail {
     background-color: var(--charcoal);
