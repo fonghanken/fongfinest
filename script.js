@@ -62,6 +62,16 @@ document.addEventListener('DOMContentLoaded', () => {
     const fadeElements = document.querySelectorAll('.fade-in-up');
     fadeElements.forEach(el => observer.observe(el));
     
+    
+    const isMainPage = document.getElementById('hero') !== null;
+    const navActionsBlock = document.querySelector('.nav-actions');
+
+    if (isMainPage && navActionsBlock) {
+        if (window.scrollY < window.innerHeight * 0.5) {
+            navActionsBlock.classList.add('nav-actions-hidden');
+        }
+    }
+
     // Navbar scroll effect
     const navbar = document.querySelector('.navbar');
     window.addEventListener('scroll', () => {
@@ -70,6 +80,15 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.05)';
         }
+
+        if (isMainPage && navActionsBlock) {
+            if (window.scrollY > window.innerHeight * 0.5) {
+                navActionsBlock.classList.remove('nav-actions-hidden');
+            } else {
+                navActionsBlock.classList.add('nav-actions-hidden');
+            }
+        }
+
     });
 
     // Hero Image Rotation
