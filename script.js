@@ -65,12 +65,31 @@ document.addEventListener('DOMContentLoaded', () => {
     
     const isMainPage = document.getElementById('hero') !== null;
     const navActionsBlock = document.querySelector('.nav-actions');
+    const footer = document.querySelector('footer');
 
-    if (isMainPage && navActionsBlock) {
-        if (window.scrollY < window.innerHeight * 0.5) {
-            navActionsBlock.classList.add('nav-actions-hidden');
+    const updateNavActionsVisibility = () => {
+        if (!navActionsBlock) return;
+        
+        let hideAtTop = isMainPage && window.scrollY < window.innerHeight * 0.5;
+        
+        let hideAtBottom = false;
+        if (footer) {
+            const footerRect = footer.getBoundingClientRect();
+            // Hide if the footer enters the viewport
+            if (footerRect.top < window.innerHeight) {
+                hideAtBottom = true;
+            }
         }
-    }
+        
+        if (hideAtTop || hideAtBottom) {
+            navActionsBlock.classList.add('nav-actions-hidden');
+        } else {
+            navActionsBlock.classList.remove('nav-actions-hidden');
+        }
+    };
+
+    // Initial check on load
+    updateNavActionsVisibility();
 
     // Navbar scroll effect
     const navbar = document.querySelector('.navbar');
@@ -81,14 +100,7 @@ document.addEventListener('DOMContentLoaded', () => {
             navbar.style.boxShadow = '0 2px 10px rgba(0,0,0,0.05)';
         }
 
-        if (isMainPage && navActionsBlock) {
-            if (window.scrollY > window.innerHeight * 0.5) {
-                navActionsBlock.classList.remove('nav-actions-hidden');
-            } else {
-                navActionsBlock.classList.add('nav-actions-hidden');
-            }
-        }
-
+        updateNavActionsVisibility();
     });
 
     // Hero Image Rotation
