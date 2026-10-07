@@ -967,12 +967,13 @@ a {
     background-color: #166FE5;
 }
 
-@media (min-width: 769px) {
-    .nav-actions.nav-actions-hidden {
-        opacity: 0;
-        pointer-events: none;
-    }
-    .nav-actions {
-        transition: opacity 0.4s ease;
-    }
+
+.nav-actions.nav-actions-hidden {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
 }
+.nav-actions {
+    transition: opacity 0.4s ease, visibility 0.4s ease;
+}
+
